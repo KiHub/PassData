@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass Data Project" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5P-0B-qF9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass Data Project" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5P-0B-qF9">
                                 <rect key="frame" x="90" y="106" width="234" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="234" id="ECJ-kH-Jvb"/>
@@ -106,7 +106,6 @@
                                 </state>
                                 <connections>
                                     <action selector="gobackPressed:" destination="PJ2-86-n3A" eventType="touchUpInside" id="Bnw-WO-iSw"/>
-                                    <segue destination="ZFW-5T-KAQ" kind="unwind" unwindAction="unwindSegueToMainScreenWithSegue:" id="dMN-hV-jSZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -138,6 +137,7 @@
                     <navigationItem key="navigationItem" id="b0d-rJ-UFK"/>
                     <connections>
                         <outlet property="label" destination="Wap-xO-uV9" id="vo4-KC-Qgd"/>
+                        <segue destination="ZFW-5T-KAQ" kind="unwind" identifier="unwindSegue" unwindAction="unwindSegueToMainScreenWithSegue:" id="cG7-Vb-2Ds"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNH-GW-qFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

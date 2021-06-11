@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
-        
+        guard segue.identifier == "unwindSegue" else {return}
         guard let svc = segue.source as? SecondViewController else {return}
         self.passLogo.text = loginTF.text
     }
