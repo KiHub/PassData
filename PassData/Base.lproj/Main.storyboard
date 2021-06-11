@@ -37,6 +37,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LHF-8Q-m61"/>
                                     <segue destination="PJ2-86-n3A" kind="show" id="1rV-KR-9Cz"/>
                                 </connections>
                             </button>
@@ -69,15 +70,19 @@
                             <constraint firstItem="iaz-Lz-iiI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="vha-yL-Feb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginTF" destination="gKl-TO-bUx" id="UZR-Ox-Lg4"/>
+                        <outlet property="passwordTF" destination="JBb-JW-P5p" id="CT4-f6-Sbs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="ecC-jT-LJi">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="PJ2-86-n3A" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="PJ2-86-n3A" customClass="SecondViewController" customModule="PassData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lcl-Sm-zdx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,6 +100,9 @@
                                 <state key="normal" title="Go back">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="gobackPressed:" destination="PJ2-86-n3A" eventType="touchUpInside" id="Bnw-WO-iSw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ju4-gw-7Eu"/>
@@ -131,6 +139,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="b0d-rJ-UFK"/>
+                    <connections>
+                        <outlet property="label" destination="Wap-xO-uV9" id="vo4-KC-Qgd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNH-GW-qFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
