@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass Data Project" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5P-0B-qF9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass Data Project" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5P-0B-qF9">
                                 <rect key="frame" x="90" y="106" width="234" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="234" id="ECJ-kH-Jvb"/>
@@ -38,7 +38,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LHF-8Q-m61"/>
-                                    <segue destination="PJ2-86-n3A" kind="show" id="1rV-KR-9Cz"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="iaz-Lz-iiI">
@@ -72,7 +71,9 @@
                     </view>
                     <connections>
                         <outlet property="loginTF" destination="gKl-TO-bUx" id="UZR-Ox-Lg4"/>
+                        <outlet property="passLogo" destination="h5P-0B-qF9" id="NTf-eW-j83"/>
                         <outlet property="passwordTF" destination="JBb-JW-P5p" id="CT4-f6-Sbs"/>
+                        <segue destination="PJ2-86-n3A" kind="show" identifier="firstSegue" id="ueq-Tk-qNM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -87,21 +88,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wap-xO-uV9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wap-xO-uV9">
                                 <rect key="frame" x="162.5" y="227" width="89" height="51"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4q-1S-TQD">
-                                <rect key="frame" x="169.5" y="772" width="75" height="49"/>
+                                <rect key="frame" x="147.5" y="773" width="119" height="49"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="119" id="pbi-Qx-8lt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="27"/>
                                 <state key="normal" title="Go back">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="gobackPressed:" destination="PJ2-86-n3A" eventType="touchUpInside" id="Bnw-WO-iSw"/>
+                                    <segue destination="ZFW-5T-KAQ" kind="unwind" unwindAction="unwindSegueToMainScreenWithSegue:" id="dMN-hV-jSZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,32 +114,24 @@
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
                             <constraint firstItem="Wap-xO-uV9" firstAttribute="top" secondItem="Ju4-gw-7Eu" secondAttribute="top" constant="67" id="02m-AK-7BK"/>
-                            <constraint firstItem="Ju4-gw-7Eu" firstAttribute="bottom" secondItem="g4q-1S-TQD" secondAttribute="bottom" constant="41" id="0gv-up-RN8"/>
+                            <constraint firstItem="Ju4-gw-7Eu" firstAttribute="bottom" secondItem="g4q-1S-TQD" secondAttribute="bottom" constant="40" id="3BC-Rm-2E6"/>
                             <constraint firstItem="Wap-xO-uV9" firstAttribute="centerX" secondItem="Ju4-gw-7Eu" secondAttribute="centerX" id="Dhh-9B-vR3"/>
                             <constraint firstItem="Wap-xO-uV9" firstAttribute="top" secondItem="Ju4-gw-7Eu" secondAttribute="top" constant="183" id="GUD-iu-TTz"/>
-                            <constraint firstItem="Ju4-gw-7Eu" firstAttribute="bottom" secondItem="g4q-1S-TQD" secondAttribute="bottom" constant="81" id="Owx-Gl-nN2"/>
-                            <constraint firstItem="g4q-1S-TQD" firstAttribute="centerX" secondItem="Ju4-gw-7Eu" secondAttribute="centerX" id="Qlk-7d-HKG"/>
-                            <constraint firstItem="g4q-1S-TQD" firstAttribute="centerX" secondItem="Ju4-gw-7Eu" secondAttribute="centerX" id="gHy-eV-Sr6"/>
+                            <constraint firstItem="g4q-1S-TQD" firstAttribute="centerX" secondItem="Ju4-gw-7Eu" secondAttribute="centerX" id="RaK-i7-EPZ"/>
                             <constraint firstItem="Wap-xO-uV9" firstAttribute="centerX" secondItem="Lcl-Sm-zdx" secondAttribute="centerX" id="ipe-l6-uMK"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Owx-Gl-nN2"/>
                                 <exclude reference="02m-AK-7BK"/>
                                 <exclude reference="Dhh-9B-vR3"/>
-                                <exclude reference="Qlk-7d-HKG"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
                             <mask key="constraints">
-                                <exclude reference="0gv-up-RN8"/>
-                                <include reference="Owx-Gl-nN2"/>
                                 <include reference="02m-AK-7BK"/>
                                 <include reference="Dhh-9B-vR3"/>
                                 <exclude reference="GUD-iu-TTz"/>
                                 <exclude reference="ipe-l6-uMK"/>
-                                <include reference="Qlk-7d-HKG"/>
-                                <exclude reference="gHy-eV-Sr6"/>
                             </mask>
                         </variation>
                     </view>
@@ -144,6 +141,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNH-GW-qFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ZFW-5T-KAQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="892.75362318840587" y="103.79464285714285"/>
         </scene>
